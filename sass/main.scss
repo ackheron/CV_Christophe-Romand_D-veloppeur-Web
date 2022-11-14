@@ -1,2 +1,45 @@
 @import "reset";
 @import "base";
+
+/*=============================================
+=            Layout grobal            =
+=============================================*/
+
+.grid-container {
+    display: grid;
+    grid: "picture header" auto "aside main" 1fr / 21.875rem auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: blue;
+    text-align: center;
+    padding: 5rem 3.125rem;
+    background: linear-gradient(to right, var(--primary), var(--light));
+    color: white;
+
+    h1 {
+        font-size: 3.75rem;
+        line-height: 5rem;
+        font-weight: 300;
+        letter-spacing: 1.875rem;
+    }
+}
+
+.picture {
+    grid-area: picture;
+    // background: red;
+}
+
+aside {
+    grid-area: aside;
+    // background-color: greenyellow;
+}
+
+main {
+    grid-area: main;
+    // background-color: purple;
+}
+
+/*=====  End of Layout grobal  ======*/
