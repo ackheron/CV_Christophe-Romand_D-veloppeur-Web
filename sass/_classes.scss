@@ -1,0 +1,16 @@
+.title {
+    &-small {
+        letter-spacing: .3125rem;
+        font-size: 1.0625rem;
+    }
+}
+
+.text {
+    &-normal {
+        font-weight: 400;
+    }
+
+    &-bold {
+        font-weight: 700;
+    }
+}

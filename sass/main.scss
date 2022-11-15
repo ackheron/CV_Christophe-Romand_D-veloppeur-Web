@@ -1,5 +1,6 @@
 @import "reset";
 @import "base";
+@import "classes";
 
 /*=============================================
 =            Layout global            =
@@ -38,6 +39,7 @@ header {
 .picture {
     grid-area: picture;
     background: var(--background);
+    border-right: 1px solid #ddd;
 
     img {
         border-radius: 50%;
@@ -47,8 +49,43 @@ header {
 
 aside {
     grid-area: aside;
-    // background-color: greenyellow;
+    background: var(--background);
+    border-right: 1px solid #ddd;
+    padding-top: 3.125rem;
+    color: #f8f8ff;
+
+    h2 {
+        background: var(--primary);
+        padding: .625rem 0 .625rem .625rem;
+        width: 50%;
+        color: var(--background);
+    }
+
+    .bloc {
+        margin-bottom: 3.125rem;
+        padding: 0 3.125rem;
+
+
+        h3 {
+            margin-bottom: 0;
+            font-size: .875rem;
+        }
+
+        h4 {
+            margin-bottom: 0;
+            font-size: .875rem;
+            font-weight: 300;
+        }
+
+        p {
+            margin: 0 0 1.25rem 0;
+            font-style: italic;
+        }
+
+    }
 }
+
+
 
 main {
     grid-area: main;
