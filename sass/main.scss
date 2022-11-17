@@ -57,7 +57,7 @@ aside {
     h2 {
         background: var(--primary);
         padding: .625rem 0 .625rem .625rem;
-        width: 50%;
+        width: 60%;
         color: var(--background);
     }
 
@@ -80,6 +80,53 @@ aside {
         p {
             margin: 0 0 1.25rem 0;
             font-style: italic;
+        }
+
+        .bar-skill {
+            position: relative;
+            margin: 1.25rem 0;
+            height: .3125rem;
+            background: #f8f8ff;
+
+            &-progress {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: .3125rem;
+                background-color: var(--progress);
+                // width: 60%;
+            }
+
+            &-dot {
+                position: relative;
+                height: 10px;
+                width: 10px;
+                background: var(--progress);
+                top: -2.5px;
+                transform: rotate(45deg);
+                left: calc(100% - 5px);
+            }
+
+            .pro1 {
+                width: var(--html);
+            }
+
+            .pro2 {
+                width: var(--js);
+            }
+
+            .pro3 {
+                width: var(--node);
+            }
+
+            .pro4 {
+                width: var(--vue);
+            }
+
+            .pro5 {
+                width: var(--sql);
+            }
+
         }
 
     }
