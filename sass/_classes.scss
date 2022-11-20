@@ -6,11 +6,30 @@
 }
 
 .text {
+    &-light {
+        font-weight: 300;
+    }
+
     &-normal {
         font-weight: 400;
     }
 
     &-bold {
         font-weight: 700;
+    }
+
+    &-hint {
+        color: var(--hint);
+    }
+
+    &-italic {
+        font-style: italic;
+    }
+}
+
+.flex {
+    &-column {
+        display: flex;
+        flex-direction: column;
     }
 }
