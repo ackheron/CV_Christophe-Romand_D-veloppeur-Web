@@ -1,0 +1,30 @@
+/* largeur max et auto centrage */
+@mixin center-max {
+    max-width: 1440px;
+    margin: auto;
+}
+
+/*=============================================
+=            Mixin media queries pour la gestion responsive des breakpoints            =
+=============================================*/
+
+/* :@param {String} $breakpoint - Breakpoint name
+@require $breakpoints */
+
+@mixin responsive($breakpoint) {
+
+    // Si la clef existe dans la map "breakpoints""
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Affiche une media query basé sur la valeur
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+    // Si la clef n'est pas dans la map "$breakpoints"
+    @else {
+        @warn "Malheureusement, aucune valeur n'a pu être récupérée de  `#{$breakpoint}`. "
+        +"Les breakpoints disponibles sont: #{map-keys($breakpoints)}.";
+    }
+}
