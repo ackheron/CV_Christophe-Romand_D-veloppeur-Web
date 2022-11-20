@@ -52,7 +52,7 @@ aside {
     background: var(--background);
     border-right: 1px solid #ddd;
     padding-top: 3.125rem;
-    color: #f8f8ff;
+    color: var(--text-light);
 
     h2 {
         background: var(--primary);
@@ -129,6 +129,17 @@ aside {
 
         }
 
+    }
+
+    .social-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        i {
+            font-size: 25px;
+            flex: 0 0 50px;
+        }
     }
 }
 
