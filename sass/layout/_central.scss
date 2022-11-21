@@ -46,6 +46,28 @@ main {
                     font-weight: 700;
                 }
             }
+            .link {
+                display: flex;
+                align-items: center;
+                margin-top: 2.5rem;
+                i {
+                    margin-left: 1.25rem;
+                    font-size: 1.5rem;
+                }
+                a {
+                    color: var(--text);
+                    margin-left: 1.25rem;
+                    padding: 0.625rem 1rem;
+                    border: 1px solid var(--hint);
+                    border-radius: 10px;
+                    transition: all 300ms;
+                    &:hover {
+                        background-color: var(--primary);
+                        color: var(--text-light);
+                        border: 1px solid var(--primary);
+                    }
+                }
+            }
         }
     }
 }
