@@ -48,15 +48,24 @@ main {
             }
             .link {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-top: 2.5rem;
+                p {
+                    margin-right: 1.25rem;
+                    margin-bottom: 10px;
+                }
                 i {
-                    margin-left: 1.25rem;
+                    // margin-left: 1.25rem;
                     font-size: 1.5rem;
+                    margin-right: 1.25rem;
+                    @include responsive(soleil) {
+                        // display: none;
+                    }
                 }
                 a {
                     color: var(--text);
-                    margin-left: 1.25rem;
+                    // margin-left: 1.25rem;
                     padding: 0.625rem 1rem;
                     border: 1px solid var(--hint);
                     border-radius: 10px;
@@ -65,6 +74,9 @@ main {
                         background-color: var(--primary);
                         color: var(--text-light);
                         border: 1px solid var(--primary);
+                    }
+                    @include responsive(soleil) {
+                        margin-left: 0;
                     }
                 }
             }

@@ -1,7 +1,11 @@
 .title {
     &-small {
-        letter-spacing: .3125rem;
+        letter-spacing: 0.3125rem;
         font-size: 1.0625rem;
+    }
+    &-medium {
+        letter-spacing: 0.3125rem;
+        font-size: 24px;
     }
 }
 
