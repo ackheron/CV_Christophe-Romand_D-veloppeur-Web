@@ -1,0 +1,61 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    @include responsive(terre) {
+        padding: 3.125rem 10px;
+    }
+    background: var(--background);
+    h3 {
+        margin-bottom: 3rem;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        .prefix,
+        .postfix {
+            background: linear-gradient(to right, var(--dark), var(--light));
+            padding: 1rem 1.5rem;
+            color: white;
+            font-size: 1rem;
+            @include responsive(terre) {
+                padding: 1rem;
+            }
+        }
+        .prefix {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        button {
+            background: var(--background);
+            border: 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+                opacity: 0.8;
+            }
+            .postfix {
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+        }
+        input {
+            outline: 0;
+            border: 0;
+            min-width: 400px;
+            padding: 8px 2rem;
+            line-height: 2rem;
+            &::placeholder {
+                color: var(--text);
+            }
+            @include responsive(terre) {
+                min-width: 200px;
+            }
+        }
+    }
+}
