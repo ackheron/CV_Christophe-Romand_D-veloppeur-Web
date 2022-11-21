@@ -1,4 +1,5 @@
 @import "reset";
+@import "variables";
 @import "utils/utils";
 @import "utils/mixins";
 @import "base";
@@ -16,7 +17,15 @@
         "aside main" 1fr
         "footer footer" auto / 21.875rem auto;
     min-height: 100vh;
-    // background: var(--border);
+    @include responsive(jupiter) {
+        grid:
+            "header" auto
+            "main" auto
+            "picture" auto
+            "aside" auto
+            "footer" auto
+            / 1fr;
+    }
 }
 
 header {
@@ -30,11 +39,18 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include responsive(jupiter) {
+        padding: 3.125rem 1.25rem;
+    }
     h1 {
         font-size: 3.75rem;
         line-height: 5rem;
         font-weight: 300;
         letter-spacing: 1.875rem;
+        @include responsive(soleil) {
+            font-size: 2.5rem;
+            letter-spacing: 12px;
+        }
         span {
             display: inline-block;
             animation: bounce 2s;
@@ -47,12 +63,23 @@ header {
 
 .picture {
     grid-area: picture;
-    // background: var(--background);
     background: var(--text);
-    // border-right: 1px solid #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
     img {
         border-radius: 50%;
         padding: 3.75rem;
+    }
+    @include responsive(jupiter) {
+        img {
+            width: 65%;
+        }
+    }
+    @include responsive(terre) {
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -151,6 +178,12 @@ main {
         line-height: 1.5625rem;
         letter-spacing: 0.0938rem;
     }
+    @include responsive(terre) {
+        padding: 3.125rem 0.9375rem;
+        h2 {
+            width: 100%;
+        }
+    }
     .experience {
         display: flex;
         .timeline {
@@ -176,7 +209,7 @@ main {
                 li::before {
                     content: "•";
                     color: var(--hint);
-                    margin-right: 10px;
+                    margin-right: 0.625rem;
                 }
                 span {
                     color: var(--primary);
@@ -196,6 +229,9 @@ footer {
     align-items: center;
     color: white;
     padding: 2rem;
+    @include responsive(terre) {
+        padding: 3.125rem 10px;
+    }
     background: var(--background);
     h3 {
         margin-bottom: 3rem;
@@ -206,16 +242,19 @@ footer {
         .prefix,
         .postfix {
             background: linear-gradient(to right, var(--dark), var(--light));
-            padding: 16px 2rem;
+            padding: 1rem 1.5rem;
             color: white;
             font-size: 1rem;
+            @include responsive(terre) {
+                padding: 1rem;
+            }
         }
         .prefix {
-            border-top-left-radius: 0.5rem;
-            border-bottom-left-radius: 0.5rem;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
         }
         button {
-            background: var(--text);
+            background: var(--background);
             border: 0;
             cursor: pointer;
             transition: all 0.2s;
@@ -223,8 +262,8 @@ footer {
                 opacity: 0.8;
             }
             .postfix {
-                border-top-right-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
             }
         }
         input {
@@ -235,6 +274,9 @@ footer {
             line-height: 2rem;
             &::placeholder {
                 color: var(--text);
+            }
+            @include responsive(terre) {
+                min-width: 200px;
             }
         }
     }

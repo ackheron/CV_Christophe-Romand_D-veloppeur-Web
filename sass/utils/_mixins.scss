@@ -12,10 +12,8 @@
 @require $breakpoints */
 
 @mixin responsive($breakpoint) {
-
     // Si la clef existe dans la map "breakpoints""
     @if map-has-key($breakpoints, $breakpoint) {
-
         // Affiche une media query basé sur la valeur
         @media #{inspect(map-get($breakpoints, $breakpoint))} {
             @content;

@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
 
 :root {
-    --font-family: 'Mulish', sans-serif;
+    --font-family: "Mulish", sans-serif;
     // --light: #00c3ff;
     // --primary: #2071e7;
     // --dark: #2980b9;
-    --light: #EF5350;
+    --light: #ef5350;
     --primary: #933634;
     --dark: #6d0c1c;
     --text: #333;
@@ -15,7 +15,6 @@
     --background: #262626;
     --hint: #999;
     --border: #ddd;
-
 
     // COMPETENCES
     --html: 100%;
@@ -28,3 +27,18 @@
 
     --bs: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
+
+$breakpoints: (
+    "pluton": (
+        max-width: 480px,
+    ),
+    "terre": (
+        max-width: 600px,
+    ),
+    "jupiter": (
+        max-width: 900px,
+    ),
+    "soleil": (
+        max-width: 1200px,
+    ),
+) !default;
