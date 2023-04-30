@@ -14,11 +14,23 @@
 <img alt="Visual Studio Code" src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
 </p>
 
-* * *
+---
 
-### Mon nouveau CV en ligne de développeur Web
+Site: https://ackheron.gitlab.io/cv_christophe-romand_developpeur-web/
+
+### CV développeur web junior
 
 <img src="./screen/montageMARKDOWN.png">
 
-* * * 
+---
 
+### Description
+
+Ce repo contient mon CV de développeur web junior réalisé en HTML5 et Sass. Il présente mes compétences, mon parcours professionnel, mes projets personnels, ainsi que mes informations de contact. Il est conçu pour être clair, concis et attractif pour les employeurs potentiels.
+
+### Technologies utilisées
+
+-   Présentation de mes compétences en développement web
+-   Présentation de mon parcours professionnel
+-   Présentation de mes projets d'études et personnels
+-   Informations de contact
